@@ -1,0 +1,12 @@
+table td
+            {
+                border: 1px solid rgb(12,80,2126);
+            }
+        .a
+            {
+                border-collapse:collapse;
+            }
+        .b
+            {
+                border-collapse:collapse;
+            }
