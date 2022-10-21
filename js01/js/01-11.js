@@ -1,7 +1,7 @@
 let list = '';
 let number = prompt("값을 입력하세요");
         console.log(typeof(list));
-        list+=`<table class="a">`;
+            `<table class="a">`;
             list+=`<tr>`;
                 list+=`<th>증감연산자</th>`;
                 list+=`<th>설명</th>`;

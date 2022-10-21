@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>증감 연산자</title>
-    <script src="./js/01-11.js"></script>
-    <style>
-        table td
+table td
             {
                 border: solid 1px;
                 text-align: center;
@@ -18,8 +12,3 @@
             {
                 border-collapse:collapse;
             }
-    </style>
-</head>
-<body>
-</body>
-</html>
