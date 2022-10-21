@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //표 형식은 다르긴 한데 뜻은 통하니 상관없을거같다
+        let num = Number(prompt(`2에서 9사이의 아무 숫자를 입력하세요`));
+        //  if (!num)Number(!2,!3,!4,!5,!6,!7,!8,!9);
+        //        {
+        //             alert('2에서 9사이의 숫자만 입력하세요');
+        //        }    시발 뭔지모르겠다
+        
+        list = ``;
+        list+=`<h3>2~9사이의 입력한 숫자의 구구단</h3>`;
+        list+=`<table class="gugudan">`;
+            list+=`<tr>`;
+                list+=`<th>2에서 9까지의 사이의 값</th>`;
+                list+=`<th>곱하기</th>`;
+                list+=`<th>배수</th>`;
+                list+=`<th>결과</th>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>1</td>`;
+                list+=`<td>${num*1}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`; 
+                list+=`<td>2</td>`;
+                list+=`<td>${num*2}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>3</td>`;
+                list+=`<td>${num*3}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>4</td>`;
+                list+=`<td>${num*4}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>5</td>`;
+                list+=`<td>${num*5}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>6</td>`;
+                list+=`<td>${num*6}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>7</td>`;
+                list+=`<td>${num*7}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>8</td>`;
+                list+=`<td>${num*8}</td>`;
+            list+=`</tr>`;
+            list+=`<tr>`;
+                list+=`<td>${num}</td>`;
+                list+=`<td>X</td>`;
+                list+=`<td>9</td>`;
+                list+=`<td>${num*9}</td>`;
+            list+=`</tr>`;
+        list+=`</table>`;
+    document.write(list);
+    </script>
+    <style>
+        table th 
+            {
+                background-color: skyblue;
+                text-align: center;
+                border: 1px solid;
+            }
+        table td
+            {
+                text-align: center;
+                border: 1px solid;
+            }
+        .gugudan
+            {
+                border-collapse:collapse;
+                border: 1px solid;
+            }    
+    </style>
+</head>
+<body>
+    <!-- <h3>2~9사이의 입력한 숫자의 구구단</h3>
+    <table class="gugudan">
+        <tr>
+            <th>ㅇㅅㅇ</th>
+            <th>곱하기</th>
+            <th>배수</th>
+            <th>결과</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>1</td> 
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td> 
+            <td>2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>3</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>4</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>5</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>6</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>7</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>9</td>
+            <td></td>
+        </tr>
+    </table> -->
+</body>
+</html>

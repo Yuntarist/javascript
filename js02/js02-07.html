@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국영수 평균점수</title>
+    <script>
+        let language = Number(prompt('국어점수 입력'));
+        let math = Number(prompt('수학점수 입력'));
+        let science = Number(prompt('과학점수 입력'));
+        let average = Number((language+math+science)/3);
+        list = '';
+        alert(`입력하신\n국어점수는 ${language}\n수학 ${math}\n과학 ${science}\n평균점수 ${average}`);
+        list+= `${language>70&&math>50&&science>80}`;
+        document.write(list);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

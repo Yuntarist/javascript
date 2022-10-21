@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>자료형 변환</title>
+    <script>
+        let num = prompt('숫자1를 입력하세요.');
+        let str = prompt('숫자2를 입력하세요.');
+        console.log(typeof(num));
+        list ='';
+        list+="<h3>입력하신"+num+"값은"+typeof(num)+"타입 입니다.";
+        list+="이 타입을 숫자로 변환하겠습니다...</h3>";
+        list+="<h3>"+Number(num)+"으로 변환 완료</h3> <h4>타입:" + typeof(Number(num))+"</h4>";
+        console.log(typeof(str));  
+        list+="<h3>입력하신"+str+"값은"+typeof(str)+"타입 입니다.";
+        list+="이 타입을 문자열로 변환하겠습니다...</h3>";
+        list+="<h3>"+String(str)+"으로 변환 완료</h3> <h4>타입:" + typeof(String(str))+"</h4>";
+        document.write(list);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
