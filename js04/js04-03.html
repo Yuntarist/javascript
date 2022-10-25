@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 요소 제거</title>
+</head>
+<body>
+    <script>
+        const num = [1,2,3,4,5,6,7,8,9,10];
+        // let num_m = num.splice(3,3); //4,5,6  삭제한 것을 배열로 담아냄
+
+        // const inum = num.indexOf(7); 인덱스의 위치를 찾는다.
+        console.log(num);
+        let cc = 10 ;
+        let num_m = num.splice(num.indexOf(cc),1);
+        console.log(num);
+
+        const str = '동해물과백두산이 마르고'
+        console.log(str.indexOf('백'))
+        console.log(str.indexOf('두산이'))
+        console.log(str.indexOf('마르고'))
+        console.log(str.indexOf('이 마'))
+    </script>
+</body>
+</html>

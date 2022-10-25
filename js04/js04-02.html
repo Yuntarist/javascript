@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열요소추가</title>
+</head>
+<body>
+    <script>
+        const todo = [];
+        // console.log(todo.push('우유구매'));
+        todo.push('우유 구매');
+        todo.push('업무 메일 확인하기');
+        todo.push('필라테스 수업');
+        console.log(todo);
+        todo[5] = '갑툭튀' //없는 인덱스 위치에도 삽입;
+        todo[todo.length] = '완료 1' // length로 인해 마지막 인덱스 뒤에 삽입
+        console.log(todo.length) // 크롬 개발자 툴 콘솔에서 todo]todo.lenth] = '완료2'를 넣고 테스트 해본다.
+
+    </script>
+</body>
+</html>

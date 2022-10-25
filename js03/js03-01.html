@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>현재시각 구하기</title>
+</head>
+<body>
+    <script>
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const hour = date.getHours();
+        const min = date.getMinutes();
+        const sec = date.getSeconds();
+        let box = ""
+        
+        if (sec >= 30){
+            box = '30초 이상입니다'
+        }else{
+            box = '30초 미만입니다'
+        }
+
+        document.write(`${date} <br>
+            ${year} 년 ${month} 월 ${day} 일 ${hour} 시 ${min} 분 ${sec} 초 '(${box})'
+        `)
+        
+        // console.log(date.toISOString()) 세계표준시 포멧 출력
+
+
+
+    </script>
+</body>
+</html>

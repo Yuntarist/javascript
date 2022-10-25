@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- 등급 미만~ 이상
+A    99 ~ 90 
+B    90 ~ 80
+C    80 ~ 70
+D    70 ~ 60
+F     60 이하
+단, 100점은 A+
+성적을 입력받으면 분류하여 등급을 나타내세요. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jum = prompt('점수를 입력해주세요');
+        // if else if 사용했을떄//
+        // if(jum == 100){
+        //     document.write(`성적은 A+입니다`)}
+        //     else if(jum >= 90){
+        //         document.write(`성적은 A입니다`)
+        //     }
+        //     else if(jum >= 80){
+        //         document.write(`성적은 B입니다`)
+        //     }
+        //     else if(jum >= 70){
+        //         document.write(`성적은 C입니다`)
+        //     }
+        //     else if(jum >= 60){
+        //         document.write(`성적은 D입니다`)        
+        //     }        
+        // else{
+        //     document.write(`성적은 F입니다.`)
+        // }
+
+        // IF문만 사용했을때//
+        if(jum ==100){
+            document.write(`성적은 A+입니다`)
+        }
+        if(jum <100 && jum >= 90  ){
+            document.write(`성적은 A입니다`)
+        }
+        if(jum <90 && jum >= 80  ){
+            document.write(`성적은 B입니다`)
+        }
+        if(jum <80 && jum >= 70  ){
+            document.write(`성적은 C입니다`)
+        }
+        if(jum <70 && jum >= 60  ){
+            document.write(`성적은 D입니다`)
+        }
+        if(jum < 60  ){
+            document.write(`성적은 F입니다`)
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

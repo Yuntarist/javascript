@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{text-align: center}
+        table{
+            width: 280px;
+            height: 90px;
+            margin: auto;
+            text-align: center;
+            background-color:azure;            
+            border-collapse: collapse;
+        }
+        tr td,th{            
+            border: 1px solid black;
+        }
+        tr:first-child{
+            background-color: bisque
+        }
+        tr td:last-child{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+   
+    <script>
+    const money = Number(prompt('거스름 돈을 입력하시오'));
+    let m50k=m10k=m5k=m1k=c500=c100=c50=c10=m50kz=m10kz=m5kz=m1kz=c500z=c100z=c50z=c10z=0;
+                         
+    if (money){
+        m50k = parseInt(money / 50000);
+        m50kz = money % 50000;
+    }if(m50kz){
+        m10k = parseInt(m50kz / 10000);
+        m10kz = m50kz % 10000;
+    }if(m10kz){
+        m5k = parseInt(m10kz / 5000);
+        m5kz = m10kz % 5000; 
+    }if(m5kz){
+        m1k = parseInt(m5kz / 1000);
+        m1kz =m5kz % 1000;     
+    }if(m1kz){
+        c500 = parseInt(m1kz / 500);
+        c500z = m1kz % 500; 
+    }if(c500z){
+        c100 = parseInt(c500z / 100);
+        c100z = c500z % 100;
+    }if(c100z){
+        c50 = parseInt(c100z / 50);
+        c50z = c100z % 50;
+    }if(c50z){
+        c10 = parseInt(c50z / 10);
+        C10z = m50kz % 10;}
+        let result = `<h2>입력하신 <mark>${money}원</mark>을 거스름으로 분리하면</h2>`
+        result +=    `<div><table>
+       <tr>
+           <th>잔돈</th>
+           <th>개수</th>
+       </tr>
+       <tr>
+           <td>5만원권</td>
+           <td>${m50k}장</td>
+       </tr>
+       <tr>
+           <td>1만원권</td>
+           <td>${m10k}장</td>
+       </tr>
+       <tr>
+           <td>5천원권</td>
+           <td>${m5k}장</td>
+       </tr>
+       <tr>
+           <td>1천원권</td>
+           <td>${m1k}장</td>
+       </tr>
+       <tr>
+           <td>5백원</td>
+           <td>${c500}개</td>
+       </tr>
+       <tr>
+           <td>1백원</td>
+           <td>${c100}개</td>
+       </tr>
+       <tr>
+           <td>50원</td>
+           <td>${c50}개</td>
+       </tr>
+       <tr>
+           <td>10원</td>
+           <td>${c10}개</td>
+       </tr>
+   </table></div>`
+        
+        console.log(result)        
+        document.write(result)
+        
+    </script>
+</body>
+</html>
