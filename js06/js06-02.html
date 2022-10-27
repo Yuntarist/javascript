@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.time();
+        let dice = d1 = d2 = d3 = d4 = d5 =d6 =er = 0;
+    for(let i=0;i<1000000;i++){
+        dice = parseInt(Math.random()*6)+1;
+        if(dice==1){d1++}
+        else if(dice==2){d2++}
+        else if(dice==3){d3++}
+        else if(dice==4){d4++}
+        else if(dice==5){d5++}
+        else if(dice==6){d6++}
+        else{er++}
+    }            
+    document.write('주사위 1의 개수:'+d1+'<br>'
+                  +'주사위 2의 개수:'+d2+'<br>'                             
+                  +'주사위 3의 개수:'+d3+'<br>'                             
+                  +'주사위 4의 개수:'+d4+'<br>'                             
+                  +'주사위 5의 개수:'+d5+'<br>'                             
+                  +'주사위 6의 개수:'+d6+'<br>'+'토탈'+(d1+d2+d3+d4+d5+d6)+'번'+'에러:'+er)
+    console.timeEnd()                                            
+    </script>
+</body>
+</html>

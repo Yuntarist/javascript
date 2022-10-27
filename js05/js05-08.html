@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스무고개도전</title>
+</head>
+<body>
+   <script>
+    /*4번만에 임의의 수를 맞추어라
+    1~100까지 수 중 랜덤하게 숫자가 하나 골라진다.
+    프롬프트로 내가 입력
+    사용자가 임의로 입력(위와 동일)
+    입력된 값이 랜덤하게 골라진 숫자보다 크거나 작다고 답변을 받음 (if문 사용하여 크면 크다고 alert, 작으면 작다고 alert)
+    5번 만에 못 맞추거나 맞추면 상황이 종료 (continue/break 사용)
+    최종적으로 맞추거나 못맞출 때 결과를 알려주기 (document write)) */
+        const answer = parseInt(Math.random()*100)+1; //왜 parseInt안에 Math.random을 넣고 +1을 한건가요? 소수점이 나오니까.)
+        let me = ''; //내가 입력할 숫자
+        let ct = 5; //카운트 횟수
+        while (ct>0){ //왜 While인가요? for로 하면 적용이 안됩니다 안되는 이유는? (편해서 왜냐면 for는 3개를 했야하니까)
+            ct-- //카운트가 적용 후 한번씩 차감됨
+            me= Number(prompt('1~100 까지 숫자 중 하나 맞추기 기회는 총 4번'))
+        if(answer==me){
+            alert('정답입니다 값은:'+answer);break //정답을 맞추었을 시 break 문으로 해당 if문을 빠져나옴
+        }else if(answer>me){
+            alert('정답이 더 큰 수입니다 남은기회:'+ct)
+        }else if(answer<me){
+            alert('정답이 더 작은 수입니다 남은기회:'+ct)
+            }
+        } //위 break문에 묶인 if 문이 아니라 해당사항 없음
+        if(answer==me){
+            document.write('정답!')
+        }else{
+            document.write('다시해라')
+        }
+    </script>
+</body>
+</html>

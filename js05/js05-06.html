@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break/ continue</title>
+</head>
+<body>
+    <script>
+        /* for구문 break로 빠져나오기 */
+        // for (let i=0;;i++){// 세미콜론 2개는 의미없는 무한반복을 뜻함
+        //     alert(i+'번째 반복문입니다.');
+        //     // 진행 여부를 물어봅니다.
+        //     const q = confirm('계속 진행할까요?')
+        //     if(!q){
+        //         break
+        //     }
+        // }
+
+        /* for구문 continue로 넘어가기 */
+        // for (let i=0; i<5; i++){
+        //     //현재 작업 중지하고 다음 반복작업 수행
+        //     continue
+        //     alert(i)
+        // }
+
+        /* continue를 이용한 넘기기 */
+        for(let i=1;i<=10;i++){
+            if(i%2==1){
+                continue
+            }
+            document.write(i+" ")
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -16,13 +16,14 @@
             gugudan += `<td>${j}</td>`;
             gugudan += `</tr>`
             // gugudan += `${j}`;
-        for(let i=1;i<10;i++){
-            gugudan +=`${i}`;
-            }
+            for(let i=1;i<10;i++){
+                gugudan +=`${i*j}`;
+                }
         }
         
         gugudan += `</table>`;        
         document.write(gugudan);
+        console.log(gugudan);
     </script>
 </body>
 </html>
