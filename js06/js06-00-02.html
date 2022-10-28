@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 처리방식</title>
+</head>
+<body>
+    <script>
+
+        // const strA = '사과/배/바나나/귤/수박/복숭아';
+        // const strA = '11/35/87/65/74/8/5/42'
+        
+        const result = [111,1,5,2,78,9,12,56]
+        console.log(result);
+        // const result = strA.split("/"); // 문자열을 기호를 기점으로 배열로 변환
+        last = result.join("/") //배열을 기호를 기점으로 문자열로 반환
+        
+        /* 파괴적 */
+        // let last = result.shift(); 첫번째 요소 제거
+        // let last = result.pop(); 마지막 요소 제거
+        // let last = result.unshift('딸기'); ()안 요소를 배열 첫번째에 추가
+        // let last = result.push('파인애플'); ()안 요소를 배열 마지막에 추가
+        // last = result.sort(); 숫자는 안됨,사전적인 정렬
+
+        /* 비파괴적 */
+        // last = result.slice(3,5);
+
+        /* 결과보기 */
+        console.log(last);
+        console.log(result);
+    </script>
+</body>
+</html>

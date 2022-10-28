@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTO</title>
+</head>
+<body>
+    <script>
+    let lotto = []; //변수 lotto는 배열이다.
+       for(let i=0;i<6;i++){ //for로 6개의 숫자를 선언한다
+        let num=Math.floor(Math.random()*44)+1; //1부터 45까지의 무작위 로또 번호 생성
+            for(let j in lotto){ // for in 구문을 사용해 반복변수 안 배열 선택
+                if(num==lotto[j]){ // 로또 배열 안 숫자가 j일 경우
+                    ++lotto[j] // 안되는데에엥
+                    // num=Math.floor(Math.random()*44)+1; // 다시 무작위 번호 생성? 근데 할때 중복되서 나오지는 않는데 뭐지
+                }
+            }
+             lotto.push(num); // 마지막에 로또 뒤에 num 추가
+       }
+       lotto.sort(function(a,b){return a-b}); //뭔지모르겠는데 강사님꺼 따라하니까 됨
+       document.write('당첨번호 '+lotto);
+    </script>
+</body>
+</html>
