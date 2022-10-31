@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="chart_div"></div>
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        const data_box =[]
+        data_box.push(['로또','로또분석'])
+            for(let i=0; i<45;i++){
+                data_box.push([(i+1)+"번",i])
+            }
+            // ['로또', 'ㅇㅇ',],
+            // ['New York City, NY', 8175000],
+            // ['Los Angeles, CA', 3792000],
+            // ['Chicago, IL', 2695000],
+            // ['Houston, TX', 2099000],
+            // ['Philadelphia, PA', 1526000]
+            
+    
+    function drawBasic() {
+        
+        var data = google.visualization.arrayToDataTable(data_box)
+        var options = {
+        title: '로또 번호 확률 분석',
+        chartArea: {width: '50%',/*height:'100%'*/},
+        hAxis: {
+          title: '번호 출현 개수',
+          minValue: 0
+        },
+        vAxis: {
+          title: '로또 번호 통계'
+        }
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+    </script>
+</body>
+</html>

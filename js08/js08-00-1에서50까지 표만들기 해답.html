@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>1에서 50까지 표만들기 강사님해답본</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr, td{
+            border: 1px solid black;
+        }
+        tr:nth-child(2n+1) {
+            background-color: skyblue;
+        }
+    </style>
 </head>
 <body>
     <script>
-        // const rowCnt = 10;
-        // const columnCnt = 10;
-
-        // document.write('<table border="1">');
-        // for (let i = 0; i < 10; i++) {
-        // document.write('<tr>');
-        // for (let j = 0; j < 10; j++)  {
-        // document.write('<td>');
-        // document.write(i+j);
-        // document.write('</td>');
-        // }
-        // document.write('</tr>')
-        // }
-        // document.write('</table>');
+        let box=[];
+        for(let i=0;i<50;i++){box.push(0)}
+        box[ran]= // lotto= 결과물 , 결과물 6개 카운트 후 누적횟수 세기 
+        let num = 1;
+        let list = '<table>';
+        let out = 0;
+        for(let j=0;j<5*2;j++){
+            list +='<tr>'     
+            if(j%2==0){   
+            for(let i=0;i<10;i++){
+                list+='<td>'+num++ +'</td>'
+                }
+        }else{
+            for(let i=0;i<10;i++){
+                list+='<td>'+``+'</td>' // ㅐㅕㅅ
+                }
+            }
+            list+=('</tr>');
+        }
+        list+=('</table>')
+        document.write(list)
         let ct = 0;
         let count =1;
         for(let con=0;con<100;con++){ // 이거 왜 되는거임??????????????????????????????????????????????
@@ -39,9 +58,6 @@
             document.write(`[${count++}]`+" "+`${lotto}`+'<br>'); //왜 count에 ++를 붙여야 나오는거죠> 이미 Count에서 ++한거아닌가?
         }
         }
-        // for(let count=1;count<=10;count++){ //count 는 1만큼 증가 하지만 1만보다 작음
-        //     document.write(`[${count}]`+`${lotto}`+`<br>`)
-        // };
     </script>
 </body>
 </html>
