@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
+    <script>
+        let lotto_num=["Africa", "Asia", "Europe", "Latin America", "North America"];
+        let lotto_color=["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"];
+        let lotto_data=[2478,5267,734,784,433]
+      new Chart(document.getElementById("bar-chart-horizontal"), {
+        type: 'horizontalBar',
+        data: {
+        labels: lotto_num,
+        datasets: [
+            {
+            label: "로또 번호 통계",
+            backgroundColor: lotto_color,
+            data: lotto_data
+            }
+            ]
+            },
+            options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: '로또 통계'
+            }
+            }
+    });
+    </script>
+</body>
+</html>

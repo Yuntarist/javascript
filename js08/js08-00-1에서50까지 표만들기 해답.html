@@ -17,33 +17,21 @@
             background-color: skyblue;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 <body>
+    <canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
     <script>
-        let box=[];
-        for(let i=0;i<50;i++){box.push(0)}
-        box[ran]= // lotto= 결과물 , 결과물 6개 카운트 후 누적횟수 세기 
+        let res=[];
+        const box=[];
+        for(let i=0;i<45;i++){box[i]=0}
+        console.log(box)
         let num = 1;
-        let list = '<table>';
+        let num2 = 0;
         let out = 0;
-        for(let j=0;j<5*2;j++){
-            list +='<tr>'     
-            if(j%2==0){   
-            for(let i=0;i<10;i++){
-                list+='<td>'+num++ +'</td>'
-                }
-        }else{
-            for(let i=0;i<10;i++){
-                list+='<td>'+``+'</td>' // ㅐㅕㅅ
-                }
-            }
-            list+=('</tr>');
-        }
-        list+=('</table>')
-        document.write(list)
         let ct = 0;
         let count =1;
-        for(let con=0;con<100;con++){ // 이거 왜 되는거임??????????????????????????????????????????????
+        for(let con=0;con<1000;con++){ // 이거 왜 되는거임??????????????????????????????????????????????
         while(ct<100){
             const lotto = []; 
             while(true){
@@ -52,12 +40,62 @@
                     lotto.push(ran);
                 }
                 if(lotto.length==6)break; // lotto 숫자가 중복되면 -1을 출력해 숫자를 떨굼
-                }                         // 그리고 lotto 배열의 길이가 5가 되면 if 문 타파 후 결과출력          
+                }                         // 그리고 lotto 배열의 길이가 5가 되면 if 문 타파 후 결과출력 
+                for(let j=0;j<6;j++){
+                box[res[j]-1]++
+                }            
             ct++
-            lotto.sort(function(a,b){return a-b});
-            document.write(`[${count++}]`+" "+`${lotto}`+'<br>'); //왜 count에 ++를 붙여야 나오는거죠> 이미 Count에서 ++한거아닌가?
+            res=lotto.sort(function(a,b){return a-b});
+            document.write(`[${count++}]`+" "+`${lotto}`+'<br>'); //왜 count에 ++를 붙여야 나오는거죠> 이미 Count에서 ++한거아닌가?    
         }
         }
+        let list = '<table>';
+        for(let k=0;k<10;k++){
+            list +='<tr>'     
+            if(k%2==0){   
+            for(let l=0;l<10;l++){
+                list+='<td>'+num++ +'</td>'
+                }
+            }else{
+            for(let l=0;l<10;l++){
+                if(num2<45){
+                list+='<td>'+`${box[num2]}`+'</td>'                 
+                }else{
+                list+='<td></td>'} 
+                num2++
+            }
+        }
+        list+=('</tr>');
+        console.log(num2)
+        }
+        list+=('</table>')
+        document.write(list)
+        console.log(list)
+
+        // 그래프 시작
+        let lotto_num=[res[lotto]];
+        let lotto_color=["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"];
+        let lotto_data=[num2]
+      new Chart(document.getElementById("bar-chart-horizontal"), {
+        type: 'horizontalBar',
+        data: {
+        labels: lotto_num,
+        datasets: [
+            {
+            label: "로또 번호 통계",
+            backgroundColor: lotto_color,
+            data: lotto_data
+            }
+            ]
+            },
+            options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: '로또 통계'
+            }
+            }
+    });
     </script>
 </body>
 </html>
