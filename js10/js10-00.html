@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return 과 console.log</title>
+</head>
+<body>
+    <script>
+        function simGood(cookie,ea){
+            let sum = cookie*ea
+            return sum //값을 return으로 정확히 전달해주었음.
+        }
+        function simBad(cookie,ea){
+            let sum = cookie*ea
+            console.log(sum) //이건 값을 전해주지 않고 콘솔로그로 보여주기만 함.
+        }
+        // 두개 차이가 무었인지 자세히 생각 해 볼것.
+        // 값을 전달한 것이 아닌 값을 보여주고 끝난것.
+    </script>
+</body>
+</html>

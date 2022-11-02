@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>죽음의 로또</title>
+</head>
+<body>
+    <button onclick="lot(45,6)">한번 뽑아볼까나</button>
+    <script>
+        function lot(num,set){    //함수 lot 안의 매개 num set
+            lotto = [];
+            for(let i=0;i<set;i++){
+                let ran = Math.floor(Math.random()*num);
+                lotto.push(ran);
+            }
+            document.write(lotto);    
+        }    
+    </script>
+</body>
+</html>

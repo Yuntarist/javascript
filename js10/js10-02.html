@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수,무명함수</title>
+</head>
+<body>
+    <script>
+        let vadd = function (a,b){
+            return a+b
+        }
+        console.log(vadd(5,10))
+        console.log(typeof(vadd)) // function 으로 나옴
+
+        let vadd2 = (function (a,b){
+            return a+b+b
+        })(5,10)
+        // console.log(vadd2(5,10))
+        console.log(typeof(vadd2)) // Number 로 나옴
+    </script>
+</body>
+</html>

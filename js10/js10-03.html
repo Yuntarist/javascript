@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 스코프</title>
+</head>
+<body>
+    <script>
+        function myscope(){
+            var a = '나는 var 입니다.';
+            console.log(a)
+            {
+                var b = '나는 내부 var 입니다.'
+                let c = '나는 내부 let 입니다.'
+            }
+            console.log(b)
+            console.log(c)
+        }
+    </script>
+</body>
+</html>
