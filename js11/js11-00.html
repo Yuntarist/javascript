@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수/지역변수</title>
+</head>
+<body>
+    <h1>변수의 유효범위</h1>
+    <script>
+        // 같은 이름 전역변수 지역변수 구분
+
+        // var num = 100;     
+        // function globalN(){
+        //     var num = 200;
+        //     document.write(`함수 내부에서 변수값은 ${num} 입니다.`)
+        // }
+        // globalN()
+        // document.write(`<br>호출 끝난 뒤 변수값은 ${num} 입니다.`)
+
+        // 전역변수 변경
+
+        // var num = 100;     
+        // function globalN(){
+        //     document.write(`함수 내부에서 변수값은 ${num} 입니다.`)
+        //     num = 200;
+        // }
+        // globalN()
+        // document.write(`<br>호출 끝난 뒤 변수값은 ${num} 입니다.`)
+
+        // 전역변수?
+        function globalN(){
+            num = 200;
+            document.write(`함수 내부에서 변수값은 ${num} 입니다.`)
+        }
+        globalN()
+        document.write(`<br>호출 끝난 뒤 변수값은 ${num} 입니다.`)
+    </script>
+</body>
+</html>
