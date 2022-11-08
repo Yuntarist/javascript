@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수를 선언합니다.
+        function callThreeTimes (callback) {
+            for (let i =0; i<3; i++) {
+                callback(i) // callback이라는 매개변수는 함수이므로 호출가능
+            }
+        }
+
+        function print (i) {
+            console.log(`${i}번째 함수 호출`)
+        }
+
+        //함수를 호출합니다.
+        callThreeTimes(print)
+    </script>
+</body>
+</html>

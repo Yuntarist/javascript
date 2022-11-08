@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊은복사, 얕은복사</title>
+</head>
+<body>
+    <script>
+        // 기본형 얕은 복사
+        // var v1 = '얕은복사'
+        // var v2 = v1;
+        // console.log(v1)
+        // console.log(v2)
+        // console.log(v1==v2)
+        // console.log(v1===v2)
+        // v2 = '변할까?'
+        // console.log(v1)
+        // console.log(v2)
+        
+        
+        // 참조형 얕은 복사
+        // let arr1 = [11,22,33,44,55]
+        // let arr2 = arr1
+        // console.log(arr1)
+        // console.log(arr2)
+        // console.log(arr1==arr2)
+        // console.log(arr1===arr2)
+        // arr2[0] = 11111
+        // console.log(arr1)
+        // console.log(arr2)/ 
+
+        // 참조형 깊은 복사
+        let ar1 = [1,2,3,4,5]
+        let ar2 = [...ar1]
+        console.log(ar1) // [1,2,3,4,5]
+        console.log(ar2) // [111111,2,3,4,5] 값이 추후에 바뀔 수 있음
+        ar2[0] = 111111
+        console.log(ar1==ar2)
+        console.log(ar1===ar2)
+    </script>
+</body>
+</html>

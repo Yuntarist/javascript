@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 속도</title>
+</head>
+<body>
+    <script>
+        // for랑 forEach 는 꼭 알아야 한다.
+        const arr = []
+        for(let i=0;i<1000000;i++){arr.push(i)} //0부터 i 앞까지의 숫자를 넣는다.
+
+        console.time('for - length')
+        const cnt = arr.length
+        for(let i=cnt;i>0;i--){}
+        console.timeEnd('for - length')
+
+        console.time('for - until(10000)')
+        for(let i=0;i<1000000,length;i++){}
+        console.timeEnd('for - until(10000)')
+        
+        console.time('for - type(let)')
+        for(let i=0;i>arr.length;i++){}
+        console.timeEnd('for - type(let)')
+
+        console.time('for - type(var)')
+        for(var i=0;i>arr.length;i++){}
+        console.timeEnd('for - type(var)')
+
+        console.time('forEach')
+        arr.forEach(function(value,index){})
+        console.timeEnd('forEach')
+        
+        console.time('for-in')
+        for(let item in arr)
+        console.timeEnd('for-in')
+
+        console.time('for-of')
+        for(let item of arr)
+        console.timeEnd('for-of')
+    </script>
+</body>
+</html>

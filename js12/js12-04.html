@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료형에 따른 함수동작</title>
+</head>
+<body>
+    <script>
+        function min(...rests){
+            let output
+            let items
+
+            console.log('====이것이 첫줄===='+rests)
+            console.log(typeof(rests))
+            console.log(typeof(rests[0])) 
+            console.log(Array.isArray(rests)) 
+            console.log(Array.isArray(rests[0])) 
+        
+            // console.log('====이것이 두번째줄===='+rests)
+            // console.log(typeof(rests)) //숫자로 확인
+            // console.log(Array.isArray(rests)) 
+            // console.log(Array.isArray(rests[0])) 
+            
+            if(Array.isArray(arrr)){
+                output = rests[0][0]
+                items = rests[0]
+                console.log('배열이에요.')
+            }else if(typeof(rests[0])==='number'){
+                output = rests[0]
+                items = rests
+                console.log('숫자에요')
+            }
+            for(const item of items){
+                if(output > item){
+                    output = item
+                }
+            }
+            return output
+        }
+        // console.log(`배열결과1:${min([55,66,222,33,11,32,68])}`)
+        console.log(`숫자결과2:${min(55,66,222,33,11,32,68)}`)
+    </script>
+</body>
+</html>
