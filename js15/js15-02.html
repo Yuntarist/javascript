@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅅㅇ</title>
+</head>
+<body>
+    <script>
+        // Array를 이용하여 1부터 100까지 수를 포함한 배열을 하나 만드시오.
+        // const arr = Array(100).fill().map((value,index)=>value=index+1)
+        // console.log(arr)
+
+        // Array를 이용하여 1~100까지의 수중 3의 배수만 있는 배열을 만드시오.
+        const arr = Array(100).fill().map((value,index)=>value=index+1).filter(value=>value%3==0&&value%5==0)
+        console.log(arr)
+    </script>
+</body>
+</html>

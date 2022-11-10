@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce 함수 응용</title>
+</head>
+<body>
+    <script>
+        const arr = Array(100).fill().map((v,i)=>v=i+1) //Array로 100까지의 배열을 만듬
+        // console.log(arr) 값확인
+        
+        // mapping 기능
+        const arr_oe = arr.reduce((a,c)=>{
+            a.push(c%2?'짝수':'홀수')
+            return a
+        },[])
+        console.log(arr_oe)
+
+        // filter 기능
+        const arr_fil = arr.reduce((a,c)=>{
+            if(c>50)a.push(c);return a}
+            ,[])
+        console.log(arr_fil)
+
+    </script>
+</body>
+</html>

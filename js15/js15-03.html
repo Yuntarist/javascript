@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이게머고...</title>
+</head>
+<body>
+    <script>
+        // arr
+        // 0부터 32까지 2씩 증가
+        // 32부터 70까지 1씩 증가하고
+        // 70부터 100까지 2씩 감소하는 순서가 들어간 한개의 배열
+        // ['홀수','짝수','홀수'...] 으로 홀짝으로 분류하여 배열을 하나 더 완성하라.
+        // 이걸 map, filter,forEach 쓰지말고
+        // reduce로 완성하라.
+        // acc=누산기 구한 값들 누적시킨것, cur=현재 값, idx=현재 인덱스, 
+        const arr = []; 
+        ct = 0;
+        Array(100).fill().map((v,i)=>v=i+1) // 0부터 100까지의 배열
+            {
+            if(0<=i&&32>=i){arr.push(ct+=2)}
+            if(i>32&&i<70){arr.push(++ct)}
+            if(i>=70&&i<=100){arr.push(ct-=2)}
+            }
+        console.log(arr)
+        
+    </script>
+</body>
+</html>

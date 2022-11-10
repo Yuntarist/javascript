@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강사님 풀이본</title>
+</head>
+<body>
+    <script>
+        // arr
+        // 0부터 32까지 2씩 증가
+        // 32부터 70까지 1씩 증가하고
+        // 70부터 100까지 2씩 감소하는 순서가 들어간 한개의 배열
+        // ['홀수','짝수','홀수'...] 으로 홀짝으로 분류하여 배열을 하나 더 완성하라.
+
+        arr = []
+        arr1 = []
+        ct = 0; // 배열이 무한루프에 빠지지 않게 해준다.
+       
+        // for 사용
+        // for (let i=0;i<=100;i++){
+        //     if(0<=i&&32>=i){arr.push(ct+=2)}
+        //     if(i>32&&i<70){arr.push(++ct)}
+        //     if(i>=70&&i<=100){arr.push(ct-=2)}
+        // }
+
+        // Array 사용
+        Array(101).fill(0).map((_,i)=>{
+            if(0<=i&&32>=i){arr.push(ct+=2)}
+            if(i>32&&i<70){arr.push(++ct)}
+            if(i>=70&&i<=100){arr.push(ct-=2)}
+        })
+
+        // map 사용
+        // arr.map((v,i)=>{
+        //     if(v%2==0){
+        //         arr1[i]='짝수'
+        //     }else{
+        //         arr1[i]='홀수'
+        // }})
+
+        // map의 삼항연산자 사용
+        arr1 = arr.map(v=>(v%2==0?v='짝수':v='홀수'))
+        arr.forEach((v,i)=>console.log(`${i}번쨰 수는 ${v}이고 ${arr1[i]}이다`))
+    </script>
+</body>
+</html>
