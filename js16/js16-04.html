@@ -5,28 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>알카에다</title>
+    <script src="./js16js/16-04.js"></script>
 </head>
 <body>
-    <button onclick="fn(setInterval)">나를 눌러봐</button>
- <script>
-    //  나를 눌러봐 버튼을 누르면 console.log에 
-    //  5,4,3,2,1 
-    //  펑!
-    //  이 출력되도록 하라
-    //  단 펑!은 alert을 통해서 팝업 하도록 하기.
-    //  나를 멈춰봐 버튼을 누르면 언제든지 타이머가 멈춤
-    let count = 6
-    const countSecond5 = setInterval(()=>{
-        count--
-        console.log(`${count}`)
-        },1000)
-    const boom = setTimeout(()=>{
-        alert(`펑!`)
-        },6000)    
-    setTimeout(()=>{
-        clearTimeout(countSecond5)
-        clearInterval(boom)
-        },6000)    
- </script>
+    <script>
+        //  나를 눌러봐 버튼을 누르면 console.log에 
+        //  5,4,3,2,1 
+        //  펑!
+        //  이 출력되도록 하라
+        //  단 펑!은 alert을 통해서 팝업 하도록 하기.
+        //  나를 멈춰봐 버튼을 누르면 언제든지 타이머가 멈춤
+    </script>
+    <button onclick="kaboom()">나를 눌러봐</button>
+    <button onclick="stop()">나를 멈춰봐</button>
 </body>
 </html>

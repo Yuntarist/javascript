@@ -1,4 +1,5 @@
 let count = 6
+function kaboom (){
 const countSecond5 = setInterval(()=>{
     count--
     console.log(`${count}`)
@@ -10,4 +11,8 @@ setTimeout(()=>{
     clearTimeout(countSecond5)
     clearInterval(boom)
     },6000)    
+}
+function stop (){
+    clearInterval(kaboom)
+}
 
