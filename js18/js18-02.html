@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj={
+            name: '혼공js',
+            price: '35000',
+            publisher: '한빛미디어'            
+        }
+        // const {name,price} = obj
+        // name // '혼공js'
+        // price // '35000'
+
+        // const {a=name,b=price} = obj // d앞에 부분이 선언되면 실행가능
+        // 다른 이름으로 속성 꺼내어 출력하기
+        const {name:a,price:b}=obj 
+        console.log(a,b)
+    </script>
+</body>
+</html>

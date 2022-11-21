@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅</title>
+</head>
+<body>
+    <script>
+        // 호이스팅 : 변수나 함수가 상단으로 끌어 올려지는 현상
+        // 함수의 선언이 상단으로 끌어올려져
+        // 먼저 값이 들어가지 않고 초기화되는 현상
+        // 호이스팅이 되지않는 상태는 
+        // 함수를 선언과 동시에 생성할때 
+        // const fn = function 
+        // 더 궁금한게 있으면 온라인에서 확인해볼것
+        fn()
+        const aa = function fn(){
+            console.log('나는 호이스팅 되었어')
+        }
+
+        
+    </script>
+</body>
+</html>
