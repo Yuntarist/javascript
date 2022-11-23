@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str1 = '    안녕하세요    '
+        console.log(str1)
+        console.log(str1.trim())
+
+        let str2 = 'a,b,c,d,e,f,g,h'
+        str2_ar = str2.split(',')
+        console.log(str2_ar)
+
+        let str3 = `제가만약 
+        나비라면 
+        훨훨
+        날아갈텐데`
+        let str3_ar=str3.split('\n')
+    
+        // 일종의 노가다 방식
+        // str3_ar[1] = str3_ar[1].trim()
+        // str3_ar[2] = str3_ar[2].trim()
+        // str3_ar[3] = str3_ar[3].trim()
+
+        // 기본적인 for문, 정확히는 for in 문
+        // for (let i in str3_ar){
+        //     str3_ar[i]=str3_ar[i].trim()
+        // }
+
+        //화살표 함수를 이용한 map
+        // let str4_ar = str3_ar.map(v=>v=v.trim())
+        // console.log(str4_ar) //4안에 넣음으로써 콘솔로그 번호도 바꿔줘야한다.
+        
+      
+
+</script>
+</body>
+</html>
