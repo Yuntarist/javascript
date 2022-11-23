@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{ // 화살표 함수 양식까지 계속 암기할것
+            const header=document.querySelectorAll('span')
+            header.forEach((v,i)=>{ // 교재와는 다르게 화살표 함수를 이용하였음
+                v.textContent='HEADERS'+(i+1)
+                if(i%2===1){v.style.backgroundColor='yellow'}
+                else{v.style.backgroundColor='black'}
+                if(i%2===1){v.style.color='black'}
+                else{v.style.color='white'}
+                v.style.padding='10px'
+                // v.style.width='180px' // h1태그안에 span태그를 추가하고 querySelectorAll 값을 span으로 바꿔줄것.    
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+    <h1><span></span></h1>
+</body>
+</html>

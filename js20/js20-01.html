@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        /* innerText는 사용안함 */
         document.addEventListener('DOMContentLoaded',()=>{
             const header1 = document.querySelector('#a1')
             const header2 = document.querySelector('#a2')
             console.log(header1)
             console.log(header2)
-            header1.textContent='<h1>이것은 textContent 내용입니다.</h1>' // <h1>태그가 적용이 안되어서 나옴
-            header2.innerHTML='<h1>이것은 innerHTML 내용입니다.</h1>' // <h1>태그가 적용되어서 나옴
+            header1.textContent='<h1>이것은 textContent 내용입니다.</h1>' // <h1></h1>태그가 적용이 안되어서 나옴
+            header2.innerHTML='<h1>이것은 innerHTML 내용입니다.</h1>' // <h1></h1>태그가 적용되어서 나옴
         })
     </script>
 </head>
