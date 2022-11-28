@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const header=document.createElement('h1')
+            document.body.appendChild(header)
+            header.textContent='문서 객체 동적으로 생성하기'
+            header.setAttribute('id','a1')
+            header.setAttribute('class','h1_a1')
+            header.style.color='white'
+            header.style.backgroundColor='black'
+            const header2=document.createElement('h2')
+            const div = document.createElement('div')
+            document.body.appendChild(div)
+            div.appendChild(header2)
+            header2.textContent='나 여기 있어요!!!'
+            header2.style.color='black'
+            header2.style.backgroundColor='yellow'
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

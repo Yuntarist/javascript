@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const arr = ['밥먹자','뛰놀자','공부하자','잠자자','춤추자']
+            const key = ['식사','플레이','학습','수면','춤']
+            const obj = {}
+
+            /* 배열을 오브젝트로 만들기 1*/
+            // arr.forEach((v,i)=>{
+            //     obj[i]=v
+            // })
+            // // console.log(obj)
+
+            /* 배열을 오브젝트로 만들기2, 키도 지정해 보기 */   
+                arr.forEach((v,i)=>{
+                    obj[key[i]]=v
+                })
+            console.log(obj)
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

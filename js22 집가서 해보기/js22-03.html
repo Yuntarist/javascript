@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btnStart = document.createElement("button");
+        const btnStop = document.createElement("button");
+        btnStart.innerHTML = "동작버튼";
+        btnStop.innerHTML = "정지버튼";
+        const color = ["green", "yellow", "red"];
+        for (let i = 0; i < 3; i++) {
+          let div = document.createElement("div");
+          document.body.appendChild(div);
+          div.style.width = "100px";
+          div.style.height = "100px";
+          div.style.borderRadius = "50%";
+          div.style.backgroundColor = color[i];
+          div.style.visibility = "hidden";
+        }
+        let id1 = (id2 = id3 = 0);
+        const divs = document.body.querySelectorAll("div");
+        const t1 = () => {
+          divs[2].style.visibility = "hidden";
+          divs[0].style.visibility = "visible";
+          id1 = setTimeout(t2, 5000);
+        };
+        const t2 = () => {
+          divs[0].style.visibility = "hidden";
+          divs[1].style.visibility = "visible";
+          id2 = setTimeout(t3, 2000);
+        };
+        const t3 = () => {
+          divs[1].style.visibility = "hidden";
+          divs[2].style.visibility = "visible";
+          id3 = setTimeout(t1, 3000);
+        };
+        const end = () => {
+          clearTimeout(id1);
+          clearTimeout(id2);
+          clearTimeout(id3);
+        };
+        document.body.append(btnStart, btnStop);
+        btnStart.addEventListener("click", t1);
+        btnStop.addEventListener("click", end);
+      });
+    </script>
+</head>
+<body>
+    <!-- 동작버튼을 누르면
+    신호등이
+    초록불 5초간 ->
+    노란불 2초 ->
+    빨간불 3초 ->
+    켜지면서 순회한다.
+    정지버튼을 누르면 멈춘다. -->
+</body>
+</html>

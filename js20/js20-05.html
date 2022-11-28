@@ -9,43 +9,45 @@
         document.addEventListener('DOMContentLoaded',()=>{
             const rects = document.querySelectorAll('.rect');
             const fig = document.querySelectorAll('figcaption')
-            const lay = document.querySelectorAll('figure')
-
+            const lay = document.querySelectorAll('figure')                
+        
         Array.from(rects).reduce((acc,cur,ind)=>{
             const width = (ind*50)+150
             const src = `http://placekitten.com/${width}/${width}`
-            cur.src = src
+            cur.src = src // 주소값을 넣기
             fig[ind].innerHTML = width +'x'+ width // 사이즈 달기
             lay[ind].style.display = 'inline-block' // 그림을 붙이기
             lay[ind].style.margin = 0 // 간격없애기
         },0)
         })
-        // 사진 사이즈 150/150 200/200 250/250 300/300 350/350
     </script>
 </head>
 <body>
     <div>
+    <!-- div>(figure>img.rect+figcaption)*5 -->
     <div>
-    <figure>
-        <img src="" alt="" class="rect">
-        <figcaption></figcaption>
-    </figure>
-    <figure>
-        <img src="" alt="" class="rect">
-        <figcaption></figcaption>
-    </figure>
-        <img src="" alt="" class="rect">
-        <figcaption></figcaption>
-    </figure>
-    <figure>
-        <img src="" alt="" class="rect">
-        <figcaption></figcaption>
-    </figure>
-    <figure>
-        <img src="" alt="" class="rect">
-        <figcaption></figcaption>
-    </figure>    
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
     </div>
 </div>
+   
 </body>
 </html>

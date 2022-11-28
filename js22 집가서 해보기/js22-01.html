@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1");
+        const div1 = document.createElement("div");
+        const div2 = document.createElement("div");
+        const span1 = document.createElement("span");
+        const span2 = document.createElement("span");
+        const span3 = document.createElement("span");
+        const span4 = document.createElement("span");
+        const ul = document.createElement("ul");
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        const br = document.createElement("br");
+        const a1 = document.createElement("a");
+        const a2 = document.createElement("a");
+        document.body.append(h1, div1, div2, span3, br, span4);
+        div1.setAttribute("class", "c1");
+        div2.setAttribute("class", "c2");
+        a1.setAttribute("href", "www.naver.com");
+        a2.setAttribute("href", "www.daum.net");
+        div1.append(span1, span2);
+        div2.appendChild(ul).append(li1, li2, li3);
+        span3.appendChild(a1);
+        span4.appendChild(a2);
+        h1.textContent = "다음 html 형식을 JS로 작성하시오.";
+        span1.textContent = "1.문서객체 생성하기";
+        span2.textContent = "그리고 추가하기";
+        li1.textContent = "생성하고";
+        li2.textContent = "추가하고";
+        li3.textContent = "문서읽고";
+        a1.textContent = "네이버링크";
+        a2.textContent = "다음링크";
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <h1>다음 html 형식을 JS로 작성하시오.</h1>
+    <div class="c1">
+      <span>1.문서객체 생성하기</span>
+      <span>그리고 추가하기</span>
+    </div>
+    <div class="c2">
+      <ul>
+        <li>생성하고</li>
+        <li>추가하고</li>
+        <li>문서읽고</li>
+      </ul>
+    </div>
+    <span><a href="www.naver.com">네이버링크</a></span
+    ><br />
+    <span><a href="www.daum.net">다음링크</a></span> -->
+  </body>
+</html>
