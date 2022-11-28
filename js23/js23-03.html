@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //  동작 버튼을 누르면 3초뒤 다음과 같은 문자가 나타난다.
+        // '안녕하세요 반갑습니다.'
+        // 해제 버튼을 누르면 3초뒤 다음 문구가 사라진다.
+        // '안녕하세요 반갑습니다.'
+        // 잠금버튼을 누르면 동작버튼과 해제버튼이 눌러지지 않는다.
+        // 잠금버튼을 한번 더 누르면 동작버튼과 해제버튼이 동작가능해진다.
+        // 버튼 총 3개
+        // 현 상태를 나타내는 표현도 추가
+        document.addEventListener('DOMContentLoaded',()=>{
+
+            const h1 = document.createElement('h1')
+            h1.textContent='안녕하세요 반갑습니다'
+            
+            const btnStart = document.createElement('button')
+            btnStart.textContent='동작'
+            btnStart.addEventListener('click',()=>{
+                document.body.append(h1)
+                // h1.innerHTML='안녕하세요 반갑습니다'
+            })
+            const btnStop = document.createElement('button')
+            btnStop.textContent='해제'
+            btnStop.addEventListener('click',()=>{
+              h1.removeEventListener('click',btnStop)
+            })
+
+            const btnLock = document.createElement('button')
+            btnLock.textContent='잠금'
+
+            document.body.append(btnStart,btnStop,btnLock)
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

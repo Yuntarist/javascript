@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 클릭횟수 와 버튼 2개  (이벤트 연결 이벤트 제거) 만들고 버튼 누를때 마다 올라가게끔 만들기 
+        // 단 body안에 아무것도 안쓰고 만들어보기
+        document.addEventListener('DOMContentLoaded',()=>{
+
+            let count=0 //카운터 생성
+            // h1관련
+            const h1=document.createElement('h1') // h1 태그 생성
+            document.body.append(h1) // 위치지정
+            h1.textContent=`클릭횟수 ${count}` // 클릭횟수 카운트
+            h1.style.userSelect='none' // 드래그안되게 설정
+            
+            h1.addEventListener('click',(event)=>{ // h1 태그 클릭시
+                count++ // 카운터 증가
+                h1.textContent=`클릭횟수 ${count}` // 표기되는 방법
+            })
+            // 이벤트 연결 버튼 관련
+            const b1 = document.createElement('button') //버튼1 생성
+            document.body.append(b1) // 위치지정
+            b1.textContent='이벤트 연결' // 버튼 이름
+            b1.addEventListener('click',(event)=>{
+
+            })
+            // 이벤트 해제 버튼 관련
+            const b2 = document.createElement('button') //버튼2 생성
+            document.body.append(b2) // 위치지정
+            b2.textContent='이벤트 제거' // 버튼 이름
+            b2.removeEventListener('click',()=>{
+                h1
+            })
+
+
+
+            
+
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
