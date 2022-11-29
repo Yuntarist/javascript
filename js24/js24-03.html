@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const star = document.createElement('h1')
+            document.body.appendChild(star)
+            star.innerHTML = '★'
+            star.style.position = 'absolute'
+
+            let [x,y]=[0,0]
+            const block = 20
+            const print =_=>{
+                star.style.left = `${x*block}px`
+                star.style.top = `${y*block}px`
+            }
+            print()
+
+            const keys = {ArrowLeft:37,ArrowUp:38,ArrowRight:39,ArrowDown:40}
+            const {ArrowLeft:left,ArrowUp:up,ArrowDown:down,ArrowRight:right}=keys
+            let check =0;
+            document.body.addEventListener('keydown',event=>{
+                check = event.keyCode
+                if(left===check)x-= 1
+                if(up===check)y-= 1
+                if(right===check)x+= 1
+                if(down===check)y+= 1
+                print()
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

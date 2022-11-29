@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const input = document.createElement('input')
+            input.setAttribute('type','text')
+            const button = document.createElement('button')
+            button.textContent = '계산'
+            const br = document.createElement('br')
+            const p = document.createElement('p')
+            document.body.append(input,'inch',br,button,p)
+            
+            button.addEventListener('click',()=>{
+                const inch = Number(input.value)
+                if(isNaN(inch)){
+                    p.textContent = '숫자를 입력해주세요'
+                    return
+                }
+                const cm = inch * 2.54
+                p.textContent = `${cm} cm`
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
