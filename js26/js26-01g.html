@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-select {
+            width: 30%;
+            margin: auto;
+            text-align: center;
+            text-align-last: center;
+        }
+        p {
+            text-align:center;
+            text-align-last:center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+        // 링크 사이에 스크립트 넣으면 안됨
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const select = document.getElementsByTagName('select')
+            const p = document.getElementsByTagName('p')
+
+            select[0].addEventListener('change',(event)=>{
+                // const options = event.currentTarget.options
+                // console.log('options:'+options)
+                // const index = event.currentTarget.options.selectedIndex
+                // console.log('index:'+index)
+                // console.log('options[index]:'+option[index])
+
+                p[0].textContent = `선택: ${event.currentTarget.value}`
+            })
+        })
+    </script>
+</head>
+<body>
+    <select class="form-select" aria-label="Default select example" style="width: 30%" >
+        <option selected>떡볶이</option>
+        <option>순대</option>
+        <option>오뎅</option>
+        <option>튀김</option>
+    </select>
+    <p>선택 : 떡볶이</p>
+</body>
+</html>

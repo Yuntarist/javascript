@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1_id" class="h1_class">Hello World!!</h1>
+    <h1 id="h2_id">lorem</h1>
+
+    <script>
+        // const x = document.querySelector('#h1_id')
+        const x1 = document.getElementById('h1_id')
+        // const x1 = document.querySelector('#h2_id')
+        const x2 = document.getElementById('h2_id')
+
+        // const y = document.querySelectorAll('.h1_class')
+        const y = document.getElementsByClassName("h1_class")
+
+        // const z = document.querySelecktorAll('h1')
+        const z = document.getElementsByTagName("h1")
+
+        console.log("getElementById",x1)
+        console.log("getElementById",x2)
+        console.log("getElementsbyClassName",y)
+        console.log("getElementsByTagName",z)
+    </script>
+    
+</body>
+</html>

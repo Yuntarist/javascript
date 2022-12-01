@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 셀렉트 태그</title>
+    <style>
+        .form-select {
+            width: 30%;
+            margin: auto;
+            text-align: center;
+            text-align-last: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+        // 이 사이에 스크립트 넣으면 안됨
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+        
+        select.addEventListener('change',(event)=>{
+            const options = event.currentTarget.options
+            const index = event.currentTarget.options.selectedIndex
+
+            p.textContent = `선택 : ${options[index].textContent}`
+        })
+    })
+    </script>
+</head>
+<body>
+    <select class="form-select" aria-label="Default select example" style="width: 30%" >
+        <option selected>메뉴</option>
+        <option value="1">하나</option>
+        <option value="2">둘</option>
+        <option value="3">셋</option>
+      </select>
+      <p>엄</p>
+</body>
+</html>

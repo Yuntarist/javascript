@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임만들기</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const star = document.createElement('h1')
+            document.body.appendChild(star)
+            star.style.position = 'absolute'
+            // star.innerHTML = '★'
+            
+            let status = true
+            setInterval(()=>{
+                if(status){
+                    star.innerHTML = '<img src="./js25img/pac1.png">'
+                }else{
+                    star.innerHTML = '<img src="./js25img/pac2.png">'
+                }
+                status = !status
+            },200)
+            
+            let [x,y]=[0,0]
+            const block = 20
+            const print =_=>{
+                star.style.left = `${x*block}px`
+                star.style.top = `${y*block}px`
+            }
+            print() // 초기위치0
+            const keys = {ArrowLeft:37,ArrowUp:38,ArrowRight:39,ArrowDown:40}
+            const {ArrowLeft:left,ArrowUp:up,ArrowDown:down,ArrowRight:right} = keys
+            let check = 0;
+            document.body.addEventListener('keydown',event=>{
+                check = event.keyCode
+                if(left===check){x -= 1;star.style.transform = 'scaleX(-1)'} // 좌우 대칭
+                if(up===check){y -= 1;star.style.transform = 'rotate(270deg)'}
+                if(right===check){x += 1;star.style.transform = 'scaleX(1)'}
+                if(down===check){y += 1;;star.style.transform = 'rotate(90deg)'}
+                print()
+            })
+        })
+
+        /* 아이템을 먹었을 때 사라지는 코드 */
+        // if(x==ix&&y==iy){ //정확한 위치에서 동작
+        //     count ++ // 먹었을때 카운팅
+        //     itemrandom() // 아이템 위치를 재생성 하는 함수
+        // }
+
+        // /* 아이템을 먹었을 때 사라지는 코드 2 */ //이걸로 해볼것
+        // if(Math.abs(x-ix)<4&&Math.abs(y-iy)<4){ // 두거리의 차를 어느정도 허용하는 내용.
+        //     count ++
+        //     itemrandom()
+        // }
+    </script>
+</head>
+<body>
+</body>
+</html>

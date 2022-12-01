@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>죽음의 과제1</title>
+    
+</head>
+<body>
+    <h1>자바스크립트</h1>
+    <button>초록 버튼</button>
+    <button>빨강 버튼</button>
+    <button>밑줄 버튼</button>
+    <button>초기화 버튼</button>
+    <button>스타일 값 알아내는 버튼</button>
+    <p></p>
+    <script>
+        // 버튼 1: 초록 크기 1em
+        // 버튼 2: 빨간 가운데 정렬 2em
+        // 버튼 3: 밑줄 1.5em 파랑
+        // 초기화
+        // 스타일 값 알아내는 버튼
+        // 버튼 총 5개
+        // 각각 스타일 값 넣어주는 버튼과 그 값을 알아내는 버튼
+        // 초기화와 그 값을 알아내는 버튼 등으로 구성하라
+       
+        let h1 = document.querySelector('h1')
+        let button = document.querySelectorAll('button')
+        let p = document.querySelector('p')
+
+        button[0].addEventListener('click',()=>{
+            h1.style.cssText = 'color:green; font-size:1em;'
+        })
+        button[1].addEventListener('click',()=>{
+            h1.style.cssText = 'color:red; font-size:2em; text-align:center;'
+        })
+        button[2].addEventListener('click',()=>{
+            h1.style.cssText = 'text-decoration:underline; text-decoration-color:blue; font-size:1.5em;'
+        })
+        button[3].addEventListener('click',()=>{
+            h1.style.cssText = ''
+        })
+        button[4].addEventListener('click',()=>{
+            p.innerHTML = h1.style.cssText
+        })
+    </script>
+</body>
+</html>

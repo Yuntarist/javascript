@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 스타일 확인</title>
+</head>
+<body>
+    <h1 style="font-weight: bold; text-align: end;">cssText의 속성 알아보기</h1>
+    <button>넣기 버튼</button>
+    <button>반환 버튼</button> 
+    <p></p>
+
+    <script>
+        let h1 = document.querySelector("h1"); 
+        let p = document.querySelector("p");
+        let button = document.querySelectorAll("button")
+        
+        button[0].addEventListener('click',()=>{
+        h1.style.cssText = "color:rgb(43,146,146);font-size:2em;text-decoration: underline;"
+        })
+
+        button[1].addEventListener('click',()=>{
+            p.innerHTML = h1.style.cssText
+        })
+
+    </script>
+</body>
+</html>

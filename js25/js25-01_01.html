@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const input = document.createElement('input')
+            const button = document.createElement('button')
+            const p = document.createElement('p')
+            document.body.append(input,'달러',button,p)
+            button.innerHTML = '계산'
+
+            const won = 1313
+            button.addEventListener("click",()=>{
+                const dollar = input.value*1
+                if(isNaN(dollar)){ // 새로운것 isNaN (숫자가 아닌것을 판별함)
+                    p.textContent="숫자만 입력해라."
+                    return;
+                } 
+                let sum = dollar * won 
+                p.textContent= sum.toLocaleString("ko-KR") + '원'
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
