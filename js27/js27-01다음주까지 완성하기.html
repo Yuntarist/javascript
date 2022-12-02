@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 단위 변환 프로그램</title>
+    <script>
+            // input1 안에 넣은값이 select1의 인덱스를 통하여 select2의 인덱스가 적용된 값이 input2에 가야한다
+            // 양방향이 문제라기 보단 A=B 니까 당연하게 B=A다
+
+
+            // body안 div input select 생성
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            const div1 = document.createElement('div');
+
+            const input1 = document.createElement('input');
+            const select1 = document.createElement('select');
+            const input2 = document.createElement('input');
+            const select2 = document.createElement('select');
+
+            document.body.appendChild(div1).append(input1,select1,'=',input2,select2);
+
+
+            // 단위들을 배열로 선언해 select안에 집어넣음 for of 사용
+            const omenu = ['km','m','cm','mm','μm(마이크로미터)'] // 배열 안 내용들
+            for(let menu of omenu){
+                let option = document.createElement('option') // 옵션태그생성
+                select1.appendChild(option) // 셀렉트태그 안에 옵션태그 집어넣음
+                option.innerHTML = menu
+            }
+            
+            for(let menu of omenu){
+                let option = document.createElement('option') // 옵션태그생성
+                select2.appendChild(option) // 셀렉트태그 안에 옵션태그 집어넣음
+                option.innerHTML = menu
+            }
+            
+            // 기준이 mm인가?
+
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
