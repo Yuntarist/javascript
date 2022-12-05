@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const button = document.createElement('button')
+            const input = document.createElement('input')
+            const span = document.createElement('span')
+            const h1 = document.createElement('h1')
+            document.body.append(input,span,h1,button)
+            input.setAttribute('type','checkbox')
+            span.append('타이머활성화')
+            button.append('초기화')
+            h1.innerHTML = '0초'
+            let [timer,timerId] = [0,0]
+            input.addEventListener('change',(event)=>{
+                if(event.currentTarget.checked){
+                    timerId=setInterval(()=>{
+                        timer += 1
+                        h1.textContent = `${timer}초`
+                    },1000)
+                }else{
+                    clearInterval(timerId)
+                }
+            })
+            // button.removeEventListener('click',(event)=>{
+            //     event.currentTarget.input  
+            // })
+            // 초기화 버튼은 내일까지
+            // 힌트는 input.checked = false    
+
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

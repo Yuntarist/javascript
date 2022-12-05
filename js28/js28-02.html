@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크일때 링크활성화</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const input = document.createElement('input')
+            const span = document.createElement('span')
+            const br = document.createElement('br')
+            const a = document.createElement('a')
+            document.body.append(input,span,br,a)
+            
+            a.setAttribute("href","http://naver.com")
+            input.setAttribute("type","checkbox")
+            
+            span.textContent = '링크 활성화'
+            a.textContent = '네이버 이동'
+            
+            input.addEventListener('click',(event)=>{
+                if(event.target.checked==true){
+                    event.target.value=1
+                }else{
+                    event.target.value=0
+                }
+            })
+            if(input.value==1){
+                a.style.display='none'
+            }else{
+                a.style.display=''
+            }
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
