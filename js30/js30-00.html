@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish coalescing operator</title>
+    <script>
+        function pt(text){
+            const pr = text ?? 0 //'값이 없어요, null이거나 undefined 겠네요'
+            console.log(pr)
+        }
+
+        function ppt(text = 0){ // 초기값 null은 파악 못함
+            const pr = text
+            console.log(pr)
+        }
+
+        function ptt(text){
+            const pr = text || 1234 //'값이 없데요'
+            console.log(pr)
+        }
+
+        function pptt(text){
+            const pr = text?.split(',')
+            console.log(pr)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

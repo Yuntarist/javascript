@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 응용</title>
+    <style>
+        button{
+            margin:5px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const p1 = document.createElement('p')
+            const p2 = document.createElement('p')
+            const input = document.createElement('input')
+            const add = document.createElement('button')
+            const pop = document.createElement('button')
+            const del = document.createElement('button')
+            const fix = document.createElement('button')
+            const sort = document.createElement('button')
+            
+            document.body.append(input,add,pop,fix,sort,del,p1,p2)
+
+            add.innerHTML = '추가'
+            pop.innerHTML = '제거'
+            fix.innerHTML = '중복제거'
+            sort.innerHTML = '정리'
+            del.innerHTML = '요소모두삭제'
+
+            // input의 type이 초기값이 text지만 이걸 적는다고 가정하면
+            // input.setAttribute('type','text')
+
+            let arr = []
+            let vin = ''
+
+            input.addEventListener('keyup',(e)=>{
+                vin = e.currentTarget.value
+            })
+            add.addEventListener('click',(e)=>{
+                if(vin){
+                    arr.push(vin)
+                    p1.innerHTML = vin + '를 추가하였습니다.'
+                    p2.innerHTML = arr
+                    vin = ''
+                    input.value = vin
+                }else{
+                    p1.innerHTML = '값을 넣으세요.'
+                }
+            })
+            pop.addEventListener('click',(e)=>{
+                const pp = arr.pop()
+                vin = ''
+                input.value = vin
+                p1.innerHTML = pp ? '제거 하였습니다' : '배열이 비었습니다.'
+                p2.innerHTML = arr
+            })
+            del.addEventListener('click',(e)=>{
+                arr = []
+                // arr.length = 0
+                vin = ''
+                input.value = vin
+                p1.innerHTML = '전부 삭제 완료'
+                p2.innerHTML = '비었음'
+            })
+            fix.addEventListener('click',(e)=>{
+                const arrs = new Set(arr) // set은 중복을 허용하지 않는다.
+                arr = [...arrs] // Array.from(arrs)
+                vin = ''
+                input.value = vin
+                p1.innerHTML = '중복 제거 완료'
+                p2.innerHTML = arr
+            })
+            sort.addEventListener('click',(e)=>{
+                arr.sort((a,b)=>a-b) // 오름차순으로 정렬하는 코드
+                vin = ''
+                input.value = vin
+                p1.innerHTML = '정리 완료'
+                p2.innerHTML = arr
+            })
+
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

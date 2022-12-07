@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬스토리지 배열 응용</title>
+    <style>
+        button{
+            margin: 5px
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const p1 = document.createElement("p");
+            const p2 = document.createElement("p");
+            const input = document.createElement("input");
+            const add = document.createElement("button");
+            const pop = document.createElement("button");
+            const del = document.createElement("button");
+            const fix = document.createElement("button");
+            const sort = document.createElement("button");
+            document.body.append(input,add,pop,fix,sort,del, p1, p2)
+            add.innerHTML = '추가'
+            pop.innerHTML = '제거'
+            del.innerHTML = '요소모두삭제'
+            fix.innerHTML = '중복제거'
+            sort.innerHTML = '정렬'
+            // input.setAttribute('type', 'text')
+            let ready = localStorage.getItem('mem')??'null이야 돔항쳐!!'
+            let arr = []
+            ready=='null이야 돔항쳐!!'?arr.length=0:arr=ready.split(',')
+            let vin = ''
+            p2.innerHTML = arr
+
+            input.addEventListener('keyup',(e)=>{
+                vin = e.currentTarget.value
+            })
+
+            add.addEventListener('click',(e)=>{
+                if(vin){
+                    arr.push(vin)
+                    p1.innerHTML = vin + '를 추가 하였습니다.'
+                    p2.innerHTML = arr
+                    vin=''
+                    input.value = vin
+                }else{
+                    p1.innerHTML = '값을 넣으세요.'
+                }
+                localStorage.setItem('mem',arr)
+            })
+            pop.addEventListener('click',(e)=>{
+                const pp = arr.pop()
+                vin = ''
+                input.value = vin
+                p1.innerHTML = pp ? `${pp}를 제거 하였습니다` : '배열이 비었습니다.'
+                p2.innerHTML = arr
+                localStorage.setItem('mem',arr)
+            })
+            del.addEventListener('click',(e)=>{
+                arr.length = 0
+                vin = ''
+                input.value = vin
+                p1.innerHTML = '전부 삭제 완료'
+                p2.innerHTML = '비었음'
+                localStorage.setItem('mem',arr)
+            })
+            fix.addEventListener('click',(e)=>{
+                const arrs = new Set(arr)
+                arr = [...arrs] // Array.from(arrs)
+                vin = ''
+                input.value = vin
+                p1.innerHTML = '중복 제거 완료'
+                p2.innerHTML = arr
+                localStorage.setItem('mem',arr)
+            })
+            sort.addEventListener('click',(e)=>{
+                arr.sort((a,b)=>a-b)
+                vin = ''
+                input.value = vin
+                p1.innerHTML = '정리완료'
+                p2.innerHTML = arr
+                localStorage.setItem('mem',arr)
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- <pre><h2>
+        배열이 기록
+        배열에 요소 입력 
+        push
+        
+        배열에 요소 삭제
+        pop
+        로컬스토리지에 저장되고 삭제되도록 하라.
+        F5를 눌러도 값이 사라지지 않는다.
+        추가사항:
+        모든 요소 삭제 버튼 한개
+        중복 제거 버튼 한개
+    </h2></pre> -->
+</body>
+</html>
