@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let status = false
+            const input = document.createElement('input')
+            const span = document.createElement('span')
+            const br = document.createElement('br')
+            const a = document.createElement('a')
+            document.body.append(input,span,br,a)
+            input.setAttribute('type','checkbox')
+            a.setAttribute('href','http://naver.com')
+            a.innerHTML='네이버링크입니다.'
+
+            input.addEventListener('change',(event)=>{
+                status = event.currentTarget.checked
+            })
+
+            a.addEventListener('click',(event)=>{
+                if(!status){
+                    event.preventDefault()
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

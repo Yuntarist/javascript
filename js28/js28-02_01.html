@@ -27,9 +27,12 @@
                     clearInterval(timerId)
                 }
             })
-            // button.removeEventListener('click',(event)=>{
-            //     event.currentTarget.input  
-            // })
+            button.addEventListener('click',(event)=>{
+                clearInterval(timerId)
+                timer = 0
+                h1.innerHTML = '0초'
+                input.checked = false
+            })
             // 초기화 버튼은 내일까지
             // 힌트는 input.checked = false    
 
