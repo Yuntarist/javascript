@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch 상황1</title>
+</head>
+<body>
+    <script>
+        try{
+            JSON.parse('{잘못된 형식의 JSON ㅋㅋㅋ}')
+         }         
+        catch(e){
+            console.log(e) // `SyntaxError: Expected property name or '}' in JSON at position 1`
+            console.log(e.name) // SyntaxError
+            console.log(e.message) // Expected property name or '}' in JSON at position 1           
+        }
+    </script>
+    
+</body>
+</html>

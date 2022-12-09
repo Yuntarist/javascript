@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch 상황4</title>
+</head>
+<body>
+    <script>
+        function fn2(){
+            console.log('fn2의 시작')
+            // throw '고의적 에러!!'
+            throw new Error('고의로 낸 에러')
+            console.log('fn2의 끝')
+        }
+        function fn1(){
+            console.log('fn1의 시작')
+            fn2()
+            console.log('fn1의 끝')
+            }
+        console.log('=====프로그램의 시작=====')
+        try{
+            fn1()
+            }catch(e){
+                console.log(e)}
+        console.log('=====프로그램의 끝=====')
+        // function fn2(){
+        //     console.log('fn2의 시작')
+        //     // throw '고의적 에러!!'
+        //     throw new Error('고의로 낸 에러')
+        //     console.log('fn2의 끝')
+        // }
+        // function fn1(){
+        //     console.log('fn1의 시작')
+        //     try{
+        //         fn2()
+        //     }catch(e){
+        //         console.log(e)
+        //     }
+        //     console.log('fn1의 끝')
+        // }
+        // console.log('=====프로그램의 시작=====')
+        // fn1()
+        // console.log('=====프로그램의 끝=====')
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일 리스트 (localStorage저장)</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const h1 = document.createElement('h1')
+            const input = document.createElement('input')
+            const btn = document.createElement('button')
+            const btn3 = document.createElement('button')
+            const div = document.createElement('div')
+            const span2 = document.createElement('span')
+            
+
+            
+
+            // const addTodo = () => {
+            //     if(input.value.trim() === ''){
+            //         alert('할 일을 입력해주세요')
+            //         return
+            //     }
+            // }
+            
+            input.setAttribute('id','todo')
+            btn.setAttribute('id','add-button')
+            btn3.setAttribute('id','delete-button')
+            div.setAttribute('id','todo-list')
+            
+            h1.innerHTML='할 일 목록'
+            btn.innerHTML='추가하기'
+            btn3.innerHTML='제거하기'
+            
+            document.body.append(h1,input,btn,btn3,div)
+            div.appendChild(span2)
+            span2.innerHTML = localStorage.getItem('input')?? '비었습니다'
+            
+            btn.addEventListener('click',(event)=>{        
+                const checkbox = document.createElement('input')
+                const divs = document.createElement('div')
+                const span1 = document.createElement('span')
+                const btn2 = document.createElement('button')
+                checkbox.setAttribute('type','checkbox')
+                span1.innerHTML=input.value
+                btn2.innerHTML='죽어라'
+                div.append(divs)
+                divs.append(checkbox,span1,btn2)   
+
+                checkbox.addEventListener('change',(event)=>{
+                    span1.style.textDecoration
+                    = event.target.checked ? 'line-through' : '' // 책보고 만든 줄임 무슨말인지 모르겠습니다 
+                })                                               // 삼항연산자 (조건) ? value1 : value2 조건이 참인경우 value1이 실행되며,거짓이면 value2가 실행된다.
+                btn2.addEventListener('click',(event)=>{
+                    span1.remove()
+                    checkbox.remove()
+                    btn2.remove()
+                    divs.remove()
+                })
+            })
+            input.addEventListener('keyup',(event)=>{
+                if(event.keyCode == 13){
+                    const checkbox = document.createElement('input')
+                    const divs = document.createElement('div')
+                    const span1 = document.createElement('span')
+                    const btn2 = document.createElement('button')
+                    checkbox.setAttribute('type','checkbox')
+                    span1.innerHTML=input.value
+                    btn2.innerHTML='죽어라'
+                    div.append(divs)
+                    divs.append(checkbox,span1,btn2)   
+
+                    checkbox.addEventListener('change',(event)=>{
+                        span1.style.textDecoration
+                        = event.target.checked ? 'line-through' : '' 
+                    })                                               
+                    btn2.addEventListener('click',(event)=>{
+                        span1.remove()
+                        checkbox.remove()
+                        btn2.remove()
+                        divs.remove()
+                    })
+                }
+                const value = event.currentTarget.value
+                localStorage.setItem('input',value)
+
+            })
+            if(savedValue){
+                input.value = savedValue
+            }
+            btn3.addEventListener('click',(event)=>{
+                localStorage.clear()
+                input.value=''
+        })
+        })
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
