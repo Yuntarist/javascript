@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 여기에 clas를 작성하세요
+
+        
+        class Wizard {
+            constructor(health,mana,armor){
+                this.health = health
+                this.mana = mana
+                this.armor = armmor
+            }
+        attack(){
+            console.log('파이어볼')
+        }
+        magic(){
+            console.log('크리스마스 눈')
+        }
+    }    
+        
+        
+        
+        const x = new Wizard(545,210,10);
+        console.log(x.health,x.mana,x.armor);
+        x.attack();
+
+        // 출력 :
+        // 545 210 10
+        // 파이어볼
+    </script>
+</body>
+</html>

@@ -13,26 +13,32 @@
             const btn2 = document.createElement('button')
             const div = document.createElement('div')
             const span2 = document.createElement('span')
-            const value = [] // Tlqkf
-
+            const divs = document.createElement('div')
+            let arrValue = [] 
+            let indata = ''
+            
             h1.innerHTML = '할일 목록'
             btn1.innerHTML = '추가 하기'
             btn2.innerHTML = '전부 제거 하기'
 
+            input.addEventListener('keyup',()=>{
+                indata = input.value
+            })
             document.body.append(h1,input,btn1,btn2,div)
             div.appendChild(span2)
-            span2.innerHTML = localStorage.getItem('input') ?? '비었습니다.'
-
+            // span2.innerHTML = localStorage.getItem('input') ?? '비었습니다.'
+            arrValue = localStorage.getItem('input') ?? []
             btn1.addEventListener('click',(e)=>{
                 const checkbox = document.createElement('input')
                 const span1 = document.createElement('span')
                 const btn3 = document.createElement('button')
                 const div2 = document.createElement('div')
                 checkbox.setAttribute('type','checkbox')
-                span1.innerHTML = input.value
+                span1.innerHTML = 'indata'
                 btn3.innerHTML = '삭제'
-                div.append(checkbox,span1,btn3,div2)
-
+                div.append(divs)
+                divs.append(checkbox,span1,btn3,div2)
+                
                 checkbox.addEventListener('change',(e)=>{
                     span1.style.textDecoration
                     = event.target.checked ? 'line-through' : ''
@@ -45,9 +51,9 @@
                     div2.remove()
                 })
                 
-                value.push(input.value)
-                const value2 = JSON.stringify(value)
-                localStorage.setItem('input',value2)
+                arrValue.push(indata)
+                // const value2 = JSON.stringify(value)
+                localStorage.setItem('input',arrValue)
             })
             
             input.addEventListener('keyup',(e)=>{
@@ -57,9 +63,10 @@
                     const btn3 = document.createElement('button')
                     const div2 = document.createElement('div')
                     checkbox.setAttribute('type','checkbox')
-                    span1.innerHTML = input.value
+                    span1.innerHTML = input.value   
                     btn3.innerHTML = '삭제'
-                    div.append(checkbox,span1,btn3,div2)
+                    div.append(divs)
+                    divs.append(checkbox,span1,btn3,div2)
                     
                     checkbox.addEventListener('change',(e)=>{
                         span1.style.textDecoration
@@ -72,15 +79,17 @@
                         btn3.remove()
                         div2.remove()
                     })
-                    value.push(input.value)
-                    const value2 = JSON.stringify(value)
-                    localStorage.setItem('input',value2)
+                    arrValue.push(indata)
+                    // const value2 = JSON.stringify(value)
+                    localStorage.setItem('input',arrValue)
                 }
             })
             btn2.addEventListener('click',(e)=>{
                 localStorage.clear()
-                input.value = ''
-                span2.value.remove()
+                divs.remove()
+                span2.innerHTML = '비었습니다.'
+                indata = ''
+                arrValue = []
             })
         })
     </script>
