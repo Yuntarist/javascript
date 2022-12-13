@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속</title>
+</head>
+<body>
+    <script>
+        class Rectangle{
+            constructor(width,height){
+                this.width = width
+                this.height = height
+            }
+            getP(){
+                return (this.width+this.height)*2
+            }
+            getA(){
+                return this.width*this.height
+            }
+        }
+        class Square extends Rectangle{ // class 클래스이름 extends 부모클래스이름 // 뒤에 있는것(부모클래스)으로 부터 앞에있는 클래스(상속받을 자식 클래스)가 상속을 받는다.
+            constructor(length){
+                super(length,length) // constructor(width,height)에서 가져옴
+            }
+        }
+        const square = new Square(10)
+        console.log('둘레:'+square.getP(),'면적:'+square.getA())
+        const square2 = new Square(20)
+        console.log('둘레:'+square2.getP(),'면적:'+square2.getA())
+</script>
+</body>
+</html>

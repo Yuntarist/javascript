@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스의 고급기능 private1</title>
+</head>
+<body>
+    <script>
+        class Square{ // class 클래스이름 extends 부모클래스이름 // 뒤에 있는것(부모클래스)으로 부터 앞에있는 클래스(상속받을 자식 클래스)가 상속을 받는다.
+            #length
+            constructor(length){
+                if (length<=0)
+                    throw '길이는 0보다 커야합니다.'
+                    this.#length = length
+            }
+            getP(){
+                return this.#length*4   
+            }
+            getA(){
+                return this.#length*this.#length
+            }
+        }
+        const square = new Square(10)
+        console.log('둘레:'+square.getP(),'면적:'+square.getA())
+</script>
+</body>
+</html>
