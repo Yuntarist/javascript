@@ -1,0 +1,64 @@
+body {
+    font-family: 'Jua', sans-serif;
+}
+h1{
+    color:black;
+    background-color: white;
+}
+hr {
+    width: 73.5%;
+    float: left;
+}
+.btnwrite {
+    color : black;
+    border: none;
+    background-color: white;
+}
+a{  
+    color: black;
+    text-decoration: none;
+}
+.btnwrite :hover {
+    font-weight: bold;
+}
+.titles {
+    display: flex;
+    color: white;
+    text-align: center;
+}
+.titles2 {
+    display: flex;
+    color: black;
+    text-align: center;
+}
+.titles2:hover {
+    opacity: 100%;
+    color: gray;
+    font-weight: bold;
+}
+.color {
+    background-color: black;
+} 
+.dnum {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50px;
+}
+.vcnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50px;
+}
+.day {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 150px;
+}
+.ttl,.author{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

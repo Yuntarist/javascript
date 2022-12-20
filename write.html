@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="./CSS/write.css">
+    <script type = "text/javascript" src="./JS/struct.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        </style>
+    <script src="./JS/write.js"></script>
+</head>
+<body>
+    <h1>글작성</h1>
+    <hr>
+    <br>
+     <p><a href="./noticeboard.html">글목록으로(저장하지 않음)</a></p>
+    <div>제목
+        <br><input id="title" type="text" required /></div>
+        <div>작성자
+            <br>
+        <input id="author" type="text" required /></div>
+    <div>내용 <br>
+        <textarea id="text" required></textarea>
+    </div>
+    <div id = "err_msg" ></div>
+    <br>
+    <button id="submit">작성완료</button></br>
+</body>
+</html>
